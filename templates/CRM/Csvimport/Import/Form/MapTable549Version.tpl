@@ -12,12 +12,12 @@
 
   <div id="map-field">
       {strip}
-        <table>ee
+        <table>
             {if $savedMappingName}
               <tr class="columnheader-dark"><th colspan="4">{ts 1=$savedMappingName}Saved Field Mapping: %1{/ts}</td></tr>
             {/if}
           <tr class="columnheader">
-              {section name=rows loop=$rowDisplayCount}w
+              {section name=rows loop=$rowDisplayCount}
                   {if $skipColumnHeader }
                       {if $smarty.section.rows.iteration == 1}
                         <th>{ts}Column Headers{/ts}</th>
@@ -34,7 +34,7 @@
 
             {*Loop on columns parsed from the import data rows*}
             {section name=cols loop=$columnCount}
-                {assign var="i" value=$smarty.section.cols.index}o
+                {assign var="i" value=$smarty.section.cols.index}
               <tr style="border-bottom: 1px solid #92B6EC;">
 
                   {section name=rows loop=$rowDisplayCount}
